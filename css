@@ -1,0 +1,228 @@
+:root {
+    --header-image: url('https://sadhost.neocities.org/images/layouts/wp.jpeg');
+    --body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #08031A;
+    background-image: var(--body-bg-image);
+    background-size: 65px;
+    color: #fceaff;
+}
+
+
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+#header {
+    width: 100%;
+    height: 180px;
+    background-image: var(--header-image);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* MENU */
+#navbar {
+    background-color: #13092D;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#navbar li {
+    padding: 12px;
+}
+
+#navbar a {
+    color: #ED64F5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navbar a:hover {
+    color: #ff9df5;
+    text-decoration: underline;
+}
+
+ 
+#flex {
+    display: flex;
+    height: 100vh;
+}
+
+
+
+aside {
+    width: 220px;
+    background-color: #241445;
+    padding: 20px;
+}
+
+#leftSidebar {
+    order: 1;
+}
+
+#rightSidebar {
+    order: 3;
+}
+
+
+
+main {
+    flex: 1;
+    order: 2;
+
+    background-color: #43256E;
+    padding: 30px;
+
+    
+    height: 90vh;
+    overflow-y: auto;
+}
+
+
+main::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+main::-webkit-scrollbar-track {
+    background: #241445;
+}
+
+
+main::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #ED64F5,
+        #b84cff
+    );
+
+999px;
+}
+
+
+main::-webkit-scrollbar-thumb:hover {
+    background: #ff9df5;
+}
+
+
+
+h1,
+h2,
+h3 {
+    color: #ED64F5;
+}
+
+
+.main-interface header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.subtitulo {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+
+.introducao,
+.biografia,
+.conclusao {
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+
+.main-interface p {
+    text-align: justify;
+}
+
+
+.biografia h2,
+.conclusao h2 {
+    margin-bottom: 15px;
+}
+
+
+strong {
+    color: #FFD6FF;
+}
+
+
+/* IMAGEM */
+.imagem-destaque {
+    text-align: center;
+    margin: 30px 0;
+}
+
+
+.imagem-destaque img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+
+/* CAIXAS LATERAIS */
+.box {
+    background-color: #13092D;
+    border: 1px solid #ED64F5;
+    padding: 10px;
+}
+
+
+footer {
+    background-color: #13092D;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* RESPONSIVO */
+@media only screen and (max-width: 800px) {
+
+    #flex {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+
+    aside {
+        width: 100%;
+    }
+
+
+    main {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}  
